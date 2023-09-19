@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <fieldset>
+            <legend>카드 정보 입력</legend>
+            <ol>
+                <li><fieldset>
+                    <legend>카드 타입</legend>
+                    <ol>
+                        <li><input type="radio" name="card" id="VISA" value="VISA"><label for="VISA"> VISA</label></li>
+                        <li><input type="radio" name="card" id="AmEx" value="AmEx"><label for="AmEx"> AmEx</label></li>
+                        <li><input type="radio" name="card" id="MasterCard" value="MasterCard"><label for="MasterCard"> MasterCard</label></li>
+                    </ol>
+                </fieldset></li>
+                <li>카드 소유자 이름 <input type="text" placeholder="카드 상의 이름" required></li>
+                <li>카드 소유자의 email <input type="text" required></li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <input type="submit" value="구매">
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 100px; height: 50px;
+            margin: 10px;
+            animation: myanim 5s infinite;
+        }
+        #box1 {
+            background-color: blueviolet;
+            animation-timing-function: linear;
+        }
+        #box2 {
+            background-color: brown;
+            animation-timing-function: ease;
+        }
+        #box3 {
+            background-color: teal;
+            animation-timing-function: ease-in;
+        }
+        #box4 {
+            background-color: greenyellow;
+            animation-timing-function: ease-out;
+        }
+        @keyframes myanim {
+            from {left: 0px;}
+            to {left: 500px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">linear speed</div>
+    <div id="box2">ease speed</div>
+    <div id="box3">ease-in speed</div>
+    <div id="box4">ease-out speed</div>
+</body>
+</html>

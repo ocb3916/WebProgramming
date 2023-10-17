@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Page</title>
+    <style>
+        body {
+            margin: 0;
+            margin-top: -21px;
+        }
+        header {
+            text-align: center;
+            background-color: pink;
+            width: 100%;
+            height: 50px;
+        }
+        nav {
+            background-color: gold;
+            float: left;
+            width: 30%;
+            height: 200px;
+        }
+        #content {
+            background-color: yellow;
+            float: right;
+            width: 70%;
+            height: 200px;
+        }
+        footer {
+            background-color: brown;
+            clear: both;
+        }
+        #img1 {
+            position: relative;
+            left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div><h1>My Blog Page</h1></div>
+    </header>
+    <nav>
+        <div>
+            <h2 style="display: inline;">Links</h2>
+            <ul>
+                <li><a href="#">W3C</a></li>
+                <li><a href="#">MOZILLA</a></li>
+                <li><a href="#">HTML Docs</a></li>
+            </ul>
+            <img src="images/spade-2.png" width="55px" id="img1">
+        </div>
+    </nav>
+    <section id="content">
+        <div>
+            <h2 style="display: inline;">Semantic Tags</h2>
+            <p>시멘틱 요소(Semantic Tags)들은 브라우저에게 요소의 의미나 목적을 
+                명확하게 알려주는 요소이다.
+            </p>
+            <h2 style="display: inline;">div와 span</h2>
+            <p>div은 "divide"의 약자로써 페이지를 논리적인 섹션으로 분리하는데 사용되는 
+                태그이다. span 요소는 인라인 요소로써 텍스트를 위한 컨테이너로 사용할 수 
+                있다.
+            </p>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <p style="text-align: center; color: white;"> 
+                Copyright (c) 2023 Hong
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

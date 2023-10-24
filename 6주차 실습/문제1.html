@@ -12,7 +12,6 @@
         header {
             text-align: center;
             background-color: pink;
-            width: 100%;
             height: 50px;
         }
         nav {
@@ -26,14 +25,25 @@
             float: right;
             width: 70%;
             height: 200px;
+            overflow: hidden;
         }
         footer {
             background-color: brown;
             clear: both;
+            height: 30px;
         }
         #img1 {
             position: relative;
             left: 40px;
+        }
+        #footerbox1 {
+            position: relative;
+        }
+        .box1child {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -110%);
+            color: white;
         }
     </style>
 </head>
@@ -66,10 +76,9 @@
         </div>
     </section>
     <footer>
-        <div>
-            <p style="text-align: center; color: white;"> 
-                Copyright (c) 2023 Hong
-            </p>
+        <div id="footerbox1">
+            <p style="color: black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;홍길동</p>
+            <p class="box1child">Copyright (c) 2023 Hong</p>
         </div>
     </footer>
 </body>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid;
+        }
+        th, td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <h2>document.write()로 표만들기</h2>
+    <hr>
+    <table>
+        <tr id="row1">
+            <th>n</th>
+        </tr>
+        <tr id="row2">
+            <th>n<sup>2</sup></th>
+        </tr>
+    </table>
+    <script>
+        let row1 = document.getElementById("row1");
+        for (let i = 0; i < 10; i++) {
+            let cell = document.createElement("td");
+            cell.textContent = i;
+            row1.appendChild(cell);
+        }
+
+        let row2 = document.getElementById("row2");
+        for (let i = 0; i < 10; i++) {
+            let cell = document.createElement("td");
+            cell.textContent = i**2;
+            row2.appendChild(cell);
+        }
+    </script>
+</body>
+</html>

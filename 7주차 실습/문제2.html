@@ -10,11 +10,35 @@
     
     <p>이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다. 숫자는 1부터 100 사이에 있습니다.</p>
     숫자: <input type="number" id="num"> <button onclick="isCorrect()">확인</button><br>
-    추측횟수: <input type="number" id="click">
-    힌트: <input type="text" id="hint"> 
+    추측횟수: <input type="number" id="click"><br>
+    힌트: <input type="text" id="hint">
 
     <script>
-        
+        let myNum = Math.floor(Math.random() * 100) + 1;
+        let clickNum = 0;
+
+        function isCorrect() {
+            let x = document.getElementById("num").value;
+            x = parseInt(x);
+            clickNum += 1;
+            document.getElementById("click").value = clickNum;
+
+            if (x > myNum) {
+                document.getElementById("hint").value = "입력이 정답보다 높습니다.";
+            }
+            else if (x < myNum) {
+                document.getElementById("hint").value = "입력이 정답보다 낮습니다.";
+            }
+            else if (isNaN(x)) {
+                document.getElementById("hint").value = "숫자를 입력하세요.";
+                document.getElementById('click').value = clickNum - 1;
+                clickNum -= 1;
+            }
+            else {
+                document.getElementById("hint").value = "정답입니다.";
+            }
+
+        }
     </script>
 </body>
 </html>

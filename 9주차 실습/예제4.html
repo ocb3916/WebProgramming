@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p">다음에 학습할 내용은 HTML입니다.</p>
+    <button onclick="mybutton()">HTML 학습을 끝냈으면 누르세요.</button>
+
+    <script>
+        function mybutton() {
+            let s = document.getElementById("p").innerHTML;
+            s = s.replace("HTML", "JAVASCRIPT");
+
+            document.getElementById("p").innerHTML = s;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="a"></h2>
+
+    <script>
+        let s = prompt("아이디를 입력하시오.");
+        let myArray = new Array("Kim", "Lee", "Choi");
+        document.getElementById("a").innerHTML = "로그인 실패";
+        for (let i of myArray) {
+            if (s == i) {
+                document.getElementById("a").innerHTML = "로그인 성공";
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

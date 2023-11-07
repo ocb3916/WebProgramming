@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>new Object()로 사용자 객체 만들기</h3>
+    <hr>
+    <script>
+        class account{
+            constructor(owner, code, balance) {
+                this.owner = owner;
+                this.code = code;
+                this.balance = balance;
+            }
+            inquiry() {
+                return this.balance;
+            }
+            deposit(cash) {
+                this.balance += cash;
+            }
+            withdraw(cash) {
+                this.balance -= cash;
+            }            
+        }
+        let myaccount = new account("오찬빈", 111, 35000);
+        
+        document.write("account: " + myaccount.owner + ", " + myaccount.code + ", " + myaccount.balance + "<br>");    
+
+        myaccount.deposit(10000);
+        document.write("10000원 예금 후 잔액은 " + myaccount.inquiry() + "<br>");
+        </script>
+</body>
+</html>

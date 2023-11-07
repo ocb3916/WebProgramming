@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="calculator">
+        입력: <input type="text" name="number1"><br>
+        계산 결과: <input type="text" name="total"><br>
+
+        <input type="button" value="SIN" onclick="calc(1)">
+        <input type="button" value="LOG" onclick="calc(2)">
+        <input type="button" value="SQRT" onclick="calc(3)">
+        <input type="button" value="ABS" onclick="calc(4)">
+    </form>
+
+    <script>
+        function calc(num) {
+            let input = document.calculator.number1.value;
+            let result;
+            input = parseFloat(input);
+
+            if (num == 1) {
+                result = Math.sin((input * Math.PI) / 180.0);
+            }
+            else if (num == 2) {
+                result = Math.log(input);
+            }
+            else if (num == 3) {
+                result = Math.sqrt(input);
+            }
+            else if (num == 4) {
+                result = Math.abs(input);
+            }
+            document.calculator.total.value = result;
+        }
+    </script>
+</body>
+</html>

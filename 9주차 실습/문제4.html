@@ -9,21 +9,23 @@
     <h3>new Object()로 사용자 객체 만들기</h3>
     <hr>
     <script>
-        let account = {
-            owner: "오찬빈",
-            code: 111,
-            balance: 35000,
-
-            inquiry: function() {
-                return this.balance;
-            },
-            deposit: function(cash) {
-                this.balance += cash;
-            },
-            withdraw: function(cash) {
-                this.balance -= cash;
+        class Account{
+            constructor(owner, code, balance) {
+                this.owner = owner;
+                this.code = code;
+                this.balance = balance;
             }
+            inquiry() {
+                return this.balance;
+            }
+            deposit(cash) {
+                this.balance += cash;
+            }
+            withdraw(cash) {
+                this.balance -= cash;
+            }            
         }
+        let account = new Account("오찬빈", 111, 35000);
         
         document.write("account: " + account.owner + ", " + account.code + ", " + account.balance + "<br>");    
 

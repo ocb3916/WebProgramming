@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>book 객체 만들기</h2>
+    <hr>
+    <script>
+        class Book {
+            constructor(title, author, price) {
+                this.title = title;
+                this.author = author;
+                this.price = price;
+            }
+            print() {
+                document.write(this.title + ", " + this.author + ", " + this.price + "<br>");
+            }
+        }
+        let bookArray = [];
+        let bookPrice = [];
+        
+        for (let i = 0; i < 5; i++) {
+            let input = prompt(i + 1 + "th: 콤마(,)로 분리하면서 책 제목, 저자, 가격 순으로 입력");
+            let [title, author, price] = input.split(", ");
+            bookArray[i] = new Book(title, author, parseInt(price));
+        }
+        for (i in bookArray) {
+            bookArray[i].print();
+            bookPrice[i] = bookArray[i].price;
+        }
+        document.write("<hr>");
+        let maxPrice = Math.max(...bookPrice);
+        for (i in bookArray) {
+            if (bookArray[i].price == maxPrice) {
+                document.write("가장 가격이 비싼 책은 " + bookArray[i].title);
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

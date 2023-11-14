@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sub() {
+            document.getElementById('target').innerHTML = '나의 <img src="images/개.jpg" width="100px" height="100px"> 강아지';
+        }
+    </script>
+</head>
+<body>    
+    <h2>innerHTML 활용: 아래 글자에 클릭하면 예쁜 강아지가 보입니다.</h2>
+    <hr>
+    <p style="color: blue;" id="target">여기에 <span style="color: red;" onclick="sub()">클릭하세요</span></p>
+</body>
+</html>

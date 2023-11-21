@@ -15,17 +15,17 @@
     </form>
     <img id="img" src="" width="100" height="120" alt="선택 이미지">
     <script>
-        let fruit = document.getElementsByName("fruit");
-        for (i in fruit) {
-            fruit[i].addEventListener('change', function(event) {
-                printImage(this.value);
-            });
-        }
         function printInitImage() {
             for (i in fruit) {
                 if (fruit[i].checked)
                     document.getElementById("img").src = 'images/' + fruit[i].value + '.png';
             }
+        }
+        let fruit = document.getElementsByName("fruit");
+        for (i in fruit) {
+            fruit[i].addEventListener('change', function(event) {
+                printImage(this.value);
+            });
         }
         function printImage(imgFile) {
             if (imgFile == 'banana')

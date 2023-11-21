@@ -14,14 +14,14 @@
     <script>
         nameInput = document.getElementById("name");
         numInput = document.getElementById("num");
-        let v = document.getElementById("name").value;
-
-        nameInput.addEventListener('blur', function(event) {
-            if (v == '')
+        nameInput.addEventListener('blur', function() {
+            if (this.value == '')
                 nameInput.focus();
         });
-        numInput.addEventListener('focus', function(event) {
-            if (v == '')
+        numInput.addEventListener('focus', function() {
+            if (nameInput.value != '')
+                numInput.focus();
+            else
                 nameInput.focus();
         })
     </script>

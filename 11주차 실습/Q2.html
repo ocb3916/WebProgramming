@@ -17,7 +17,9 @@
     <script>
         let fruit = document.getElementsByName("fruit");
         for (i in fruit) {
-            fruit[i].addEventListener('change', printImage(this.value));
+            fruit[i].addEventListener('change', function(event) {
+                printImage(this.value);
+            });
         }
         function printInitImage() {
             for (i in fruit) {

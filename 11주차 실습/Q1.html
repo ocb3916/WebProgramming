@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>onfocus와 onblur</h2>
+    <hr>
+    <p>이름을 입력하지 않고 다른 창으로 이동할 수 없습니다.</p>
+    이름 <input type="text" name="" id="name"><br>
+    학번 <input type="text" name="" id="num">
+    <script>
+        nameInput = document.getElementById("name");
+        numInput = document.getElementById("num");
+        let v = document.getElementById("name").value;
+
+        nameInput.addEventListener('blur', function(event) {
+            if (v == '')
+                nameInput.focus();
+        });
+        numInput.addEventListener('focus', function(event) {
+            if (v == '')
+                nameInput.focus();
+        })
+    </script>
+</body>
+</html>

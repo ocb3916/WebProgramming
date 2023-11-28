@@ -11,41 +11,42 @@
     <form action="">
         <table style="text-align: right;">
             <tr>
-                <td>x <input type="text" id="x" value="250"></td>
-                <td>y <input type="text" id="y" value="100"></td>
+                <td>x <input type="text" id="x"></td>
+                <td>y <input type="text" id="y"></td>
             </tr>
             <tr>
-                <td>width <input type="text" id="width" value="150"></td>
-                <td>height <input type="text" id="height" value="200"></td>
+                <td>width <input type="text" id="width"></td>
+                <td>height <input type="text" id="height"></td>
             </tr>
             <tr>
-                <td>선굵기 <input type="text" id="lineWidth" value="20"></td>
+                <td>선굵기 <input type="text" id="lineWidth"></td>
                 <td>선색 <input type="color" id="lineColor"></td>
             </tr>
             <tr>
                 <td><input type="button" onclick="draw()" value="그리기"></td>
-                <td><button onclick="clear()">지우기</button></td>
+                <td><input type="button" onclick="erase()" value="지우기"></td>
             </tr>
         </table>
     </form>
     <canvas id="myCanvas" width="600" height="600" style="background-color: aliceblue;"></canvas>
     <script>
-        let context = document.getElementById('myCanvas').getContext('2d');
-        let x = document.getElementById('x').value;
-        let y = document.getElementById('y').value;
-        let width = document.getElementById('width').value;
-        let height = document.getElementById('height').value;
-        let lineWidth = document.getElementById('lineWidth').value;
-        let lineColor = document.getElementById('lineColor').value;
-
+        let canvas = document.getElementById('myCanvas');
+        let context = canvas.getContext('2d');
+        
         function draw() {
+            let x = document.getElementById('x').value;
+            let y = document.getElementById('y').value;
+            let width = document.getElementById('width').value;
+            let height = document.getElementById('height').value;
+            let lineWidth = document.getElementById('lineWidth').value;
+            let lineColor = document.getElementById('lineColor').value;
             context.beginPath();
             context.lineWidth = lineWidth;
             context.strokeStyle = `${lineColor}`;
             context.strokeRect(x, y, width, height);
         }
-        function clear() {
-            context.clearRect(0, 0, canvas)
+        function erase() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
         }
     </script>
 </body>

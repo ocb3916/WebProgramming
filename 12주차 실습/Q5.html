@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>채운 사각형과 원호 그리기</h2>
+    <hr>
+    <canvas id="myCanvas" width="300" height="400" style="background-color: aliceblue;"></canvas>
+    <script>
+        let context = document.getElementById('myCanvas').getContext('2d');
+        context.beginPath();
+        context.fillStyle = 'magenta';
+        context.fillRect(30, 30, 100, 100);
+        context.beginPath();
+        context.lineWidth = 20;
+        context.strokeRect(30, 150, 100, 100);
+        context.beginPath();
+        context.fillStyle = 'magenta';
+        context.fillRect(30, 150, 100, 100);
+        context.beginPath();
+        context.lineWidth = 20;
+        context.moveTo(80, 330);
+        context.arc(80, 330, 50, 0, Math.PI * 1.5);
+        context.closePath();
+        context.stroke();
+        context.beginPath();
+        context.fillStyle = 'lightgreen';
+        context.moveTo(80, 330);
+        context.arc(80, 330, 50, 0, Math.PI * 1.5);
+        context.closePath();
+        context.fill();
+    </script>
+</body>
+</html>

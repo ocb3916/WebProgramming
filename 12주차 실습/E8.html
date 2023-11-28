@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="300"></canvas>
+    <script>
+        let context = document.getElementById('myCanvas').getContext('2d');
+        for (let i = 0; i < 20; i++) {
+            if (i < 6)
+                context.lineCap = 'butt';
+            else if (i < 11)
+                context.lineCap = 'round';
+            else
+                context.lineCap = 'square';
+            context.lineWidth = 1 + i;
+            context.beginPath();
+            context.moveTo(5 + i * 30, 10);
+            context.lineTo(5 + i * 30, 200);
+            context.stroke();
+        }
+    </script>
+</body>
+</html>

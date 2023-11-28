@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>선의 색과 굵기</h2>
+    <hr>
+    <canvas id="myCanvas" width="300" height="300" style="background-color: aliceblue;"></canvas>
+    <script>
+        let context = document.getElementById('myCanvas').getContext('2d');
+        context.beginPath();
+        context.lineWidth = 1;
+        context.strokeStyle = 'blue';
+        context.moveTo(30, 30);
+        context.lineTo(180, 70);
+        context.stroke();
+        context.beginPath();
+        context.lineWidth = 10;
+        context.strokeStyle = 'yellowgreen';
+        context.strokeRect(30, 100, 150, 50);
+        context.beginPath();
+        context.lineWidth = 20;
+        context.strokeStyle = 'violet';
+        context.arc(100, 230, 50, 0, Math.PI * 1.5);
+        context.stroke();
+    </script>
+</body>
+</html>

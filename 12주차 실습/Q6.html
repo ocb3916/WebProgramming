@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="600" style="background-color: aliceblue;"></canvas>
+    <script>
+        let context = document.getElementById('myCanvas').getContext('2d');
+        context.strokeStyle = 'blue';
+        context.lineWidth = 1;
+        for(let i = 0; i < 4; i++) {
+            context.font = `${10 + i * 10}px forte`;
+            context.strokeText('Javascript 재밌다.', 10, 30 + i * 50);
+        }
+    </script>
+</body>
+</html>

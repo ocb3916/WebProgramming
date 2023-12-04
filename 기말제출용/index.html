@@ -22,13 +22,6 @@
     .carousel-control-next {
       right: 10%;
     }
-    .carousel-inner {
-      width: auto;
-      height: 850px;
-    }
-    .carousel-item {
-      height: 100%;
-    }
     #myfooter {
       background-color: #f7f8f9;
     }
@@ -73,9 +66,9 @@
               공유하기
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#"><button class="shareFb">Facebook</button></a></li>
-              <li><a class="dropdown-item" href="#">Kakaotalk</a></li>
-              <li><a class="dropdown-item" href="#">Twitter</a></li>
+              <li><a class="dropdown-item" href="#" onclick="shareFb();">Facebook</a></li>
+              <li><a class="dropdown-item" href="#" onclick="">Kakaotalk</a></li>
+              <li><a class="dropdown-item" href="#" onclick="shareTw();">Twitter</a></li>
             </ul>
           </li>
         </ul>
@@ -84,13 +77,13 @@
   </nav>
 
   <!-- Image Section -->
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
         aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"
         aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"
         aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
@@ -116,45 +109,72 @@
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
 
   <!-- Home Section -->
-  <section id="home" class="container mt-5">
-    <h1>Welcome to Our Humanitarian Website</h1>
-    <p>이스라엘 - 팔레스타인 분쟁에 대한 이야기를 공유하고, 분쟁으로 고통받는 민간인들의 참상을 알리는 웹사이트 입니다.</p>
-  </section>
-
-  <!-- Stories Section -->
-  <section id="stories" class="container mt-5">
-    <h2>Share Stories</h2>
-    <p>이스라엘 - 팔레스타인 분쟁에 대한 여러분들의 생각을 공유해주세요.</p>
-  </section>
+  <div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis">Welcom to Humanitarian Website</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">이스라엘 - 팔레스타인 분쟁으로 인한 민간인 피해를 알리고 후원을 유도하는 웹사이트 입니다.</p>
+    </div>
+  </div>
 
   <!-- Social Media Section -->
-  <section id="social" class="container mt-5">
-    <h2>Share on Social Media</h2>
-    <p>전쟁의 참상을 소셜 미디어를 통해 공유하여, 길 잃은 난민들이 국제사회의 도움을 받을 수 있도록 도와주세요.</p>
-  </section>
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Share on Social Media</h1>
+        <p class="lead">전쟁의 참상을 소셜 미디어를 통해 공유하여, 길잃은 난민들이 국제사회의 도움을 받을 수 있도록 도와주세요.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">공유하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Donate Section -->
-  <section id="donate" class="container mt-5">
-    <h2>Support Us</h2>
-    <p>후원을 통해 난민들에게 직접적인 지원을 할 수 있습니다. 여러분의 따뜻한 관심으로 희망을 전달해주세요.</p>
-  </section>
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Support Us</h1>
+        <p class="lead">후원을 통해 난민들에게 직접적인 지원을 할 수 있습니다. 여러분의 따뜻한 관심으로 희망을 전달해주세요.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2"><a href="https://www.sc.or.kr/support/supportDate.do?CAMPAIGN=N1150&S=29321&CPRICE=50000" target="_blank" 
+            style="text-decoration: none; color: white;">후원하기</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="container mt-5">
-    <h2>Contact Us</h2>
-    <p>For questions or suggestions, feel free to reach out to us. We value your feedback.</p>
-  </section>
+  <!-- Stories Section -->
+  <div class="px-4 pt-5 mt-5 mb-0 text-center border-bottom">
+    <h1 class="display-4 fw-bold text-body-emphasis">Share Stories</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">이스라엘 - 팔레스타인 분쟁에 대한 여러분들의 생각을 공유해주세요.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3" onclick="alert('추후에 추가될 예정입니다!');">게시글 작성하기</button>
+      </div>
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+      <div class="container px-5">
+        <img src="bootstrap-docs.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+      </div>
+    </div>
+  </div>
 
   <!-- Footer Section -->
   <div id="myfooter" class="container-fluid">
@@ -197,9 +217,9 @@
           <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
             <p>© 2023 2020010847 오찬빈. All rights reserved.</p>
             <ul class="list-unstyled d-flex">
-              <li class="ms-3"><button class="shareFb"><img src="images/ico/facebook.png"></button></li>
-              <li class="ms-3"><button class="shareKt"><img src="images/ico/kakao.png"></button></li>
-              <li class="ms-3"><button class="shareTw"><img src="images/ico/twitter.png"></button></li>
+              <li class="ms-3"><button onclick="shareFb();"><img src="images/ico/facebook.png"></button></li>
+              <li class="ms-3"><button onclick=""><img src="images/ico/kakao.png"></button></li>
+              <li class="ms-3"><button onclick="shareTw();"><img src="images/ico/twitter.png"></button></li>
             </ul>
           </div>
         </div>
@@ -212,18 +232,15 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
   <script>
-    const btnShareTw = document.querySelector('.shareTw');
-    const btnShareFb = document.querySelector('.shareFb');
-
-    btnShareTw.addEventListener('click', () => {
+    function shareTw() {
       const sendText = '응애';
       const pageUrl = 'https://www.google.com/';
       window.open(`https://twitter.com/intent/tweet?text=${sendText}&url=${pageUrl}`);
-    })
-    btnShareFb.addEventListener('click', () => {
+    }
+    function shareFb() {
       const pageUrl = 'news.v.daum.net/v/20220319120213003';
       window.open(`http://www.facebook.com/sharer/sharer.php?u=${pageUrl}`);
-    })
+    }
   </script>
 </body>
 

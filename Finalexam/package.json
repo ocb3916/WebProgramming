@@ -1,7 +1,7 @@
 {
-  "name": "webprogramming",
+  "name": "finalexam",
   "version": "1.0.0",
-  "description": "* HTML5\r * CSS\r * JavaScript",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./server",
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nunjucks": "^3.2.4"
   }
 }
